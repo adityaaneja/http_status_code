@@ -1,7 +1,7 @@
 const http = require('http');
 const os = require('os');
 
-console.log("Kubia server starting...");
+console.log("HTTP server simulator starting...");
 
 var requestCount = 0;
 
@@ -30,7 +30,7 @@ var handler = function(request, response) {
     return;
   }
   else {
-  response.writeHead(200);                 //Everything else returns 200
+  response.writeHead(200);                 //Everything else returns 200. Set HTTP liveliness probe to monitor /
   response.end("You've hit " + os.hostname() + "\n");
   }
 };
