@@ -10,7 +10,7 @@ var handler = function(request, response) {
   requestCount++;
   if (requestCount > 5) {
     response.writeHead(500);
-    response.end("I'm not well. Please restart me!");
+    response.end("Erroring out. Restarting!");
     requestCount=0; // Every sixth request returns 500. Reset the counter -aa 
     return;
   }
